@@ -1,0 +1,5 @@
+export enum ChatActionTypes {
+  SOCKET_SEND_MESSAGE = 'SEND_MESSAGE',
+  SOCKET_REGISTER = 'REGISTER',
+  SOCKET_CONNECT = 'CONNECT'
+}

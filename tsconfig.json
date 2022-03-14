@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true,
+    "sourceMap": false,
+    "baseUrl": ".",
+    "types": ["webpack-env", "jest"],
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
+    "src/assets/alertifyjs/alertify.js",
+    "src/assets/alertifyjs/alertify.min.js",
+    "src/utilities/to-persian-numbers.js",
+    "src/utilities/date-converter.js"
+  ],
+  "exclude": ["node_modules", "src/assets/alertifyjs/alertify.js"],
+  "optimization": {
+    "splitChunks": {
+      "cacheGroups": {
+        "styles": {
+          "name": "styles",
+          "test": "/.css$/",
+          "chunks": "all",
+          "enforce": "true"
+        }
+      }
+    }
+  }
+}

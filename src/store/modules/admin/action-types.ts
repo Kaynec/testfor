@@ -1,0 +1,5 @@
+export enum AdminActionTypes {
+  AUTH_REQUEST_ADMIN = 'AUTH_REQUEST_ADMIN',
+  LOG_OUT = 'LOG_OUT_ADMIN',
+  CURRENT_USER = 'CURRENT_ADMIN'
+}
